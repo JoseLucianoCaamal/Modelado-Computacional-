@@ -38,10 +38,10 @@ Se han desarrollado herramientas específicas para optimizar el flujo de trabajo
 ### [LINX | OpenFOAM Engineering Dashboard (LINX.py)](LINX.py)
 Interfaz gráfica integral para la gestión de casos. Permite automatizar el pre-procesamiento (`ideasUnvToFoam`, `checkMesh`), controlar la descomposición de mallas para paralelo y monitorear la ejecución de solvers en tiempo real.
 
-### [Gestión de Flujo Local (Execute_Local.py)](Execute_Local.py)
+### [Gestión de Flujo Local (AutomatizacionLocal.py)](AutomatizacionLocal.py)
 Script de automatización secuencial para entornos locales. Realiza la conversión de malla, aplica la corrección de condiciones de frontera (cambio de `patch` a `wall`) y gestiona la pre-compilación de condiciones `coded` antes de lanzar la ejecución en paralelo.
 
-### [Extractor de Datos de ParaView (Extractor_Data.py)](Extractor_Data.py)
+### [Extractor de Datos de ParaView (ExtractorDeDatos.py)](ExtractorDeDatos.py)
 Script de post-procesamiento masivo que interactúa con el núcleo de ParaView. Extrae magnitudes de Temperatura y Velocidad, utilizando un sistema de ordenamiento natural para facilitar el análisis cuantitativo posterior en Octave o MATLAB.
 
 ---
