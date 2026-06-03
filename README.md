@@ -18,22 +18,31 @@ Debido a la alta resolución de las mallas y la complejidad de los resultados tr
 
 | Caso de Estudio | Geometría Analizada | Enlace de Visualización|
 | :--- | :--- | :--- |
-| **Geometría 1** | Configuración base (EAHE + Chimenea única) | [Ver Simulacón](https://1drv.ms/v/c/3f9252fb099dfb89/IQCQAck2W957TIqoWTPanITjAVvd6zC228OLwo4brht7NE4?e=XLchH8) |
-| **Geometría 2** | Configuración de doble chimenea en paralelo | [Ver Simulacón](https://1drv.ms/v/c/3f9252fb099dfb89/IQBxbMkUrInHR5eeZZUXRGDQAYGeDaCmMfTu3HheQvzpPjs?e=b8L2Zg) |
-| **Geometría 3** | Configuración con chimenea de diámetro ampliado | [Ver Simulacón](https://1drv.ms/v/c/3f9252fb099dfb89/IQAWekhCO_-ZRY1VaBISJCnOAQS1A4dn0ygKSu3jJbDg_rw?e=hTFQqs) |
+| **Geometría 1** | Configuración base (EAHE + Chimenea única) | [Ver Simulación](https://1drv.ms/v/c/3f9252fb099dfb89/IQCQAck2W957TIqoWTPanITjAVvd6zC228OLwo4brht7NE4?e=XLchH8) |
+| **Geometría 2** | Configuración de doble chimenea en paralelo | [Ver Simulación](https://1drv.ms/v/c/3f9252fb099dfb89/IQBxbMkUrInHR5eeZZUXRGDQAYGeDaCmMfTu3HheQvzpPjs?e=b8L2Zg) |
+| **Geometría 3** | Configuración con chimenea de diámetro ampliado | [Ver Simulación](https://1drv.ms/v/c/3f9252fb099dfb89/IQAWekhCO_-ZRY1VaBISJCnOAQS1A4dn0ygKSu3jJbDg_rw?e=hTFQqs) |
 
 ---
 
 ## Herramientas Utilizadas
-* *OpenFOAM v13:* Resolución de ecuaciones mediante volúmenes finitos.
-* *SALOME:* Pre-procesamiento, diseño CAD y discretización del dominio (mallado).
-* *Python (LINX):* Software de optimización y automatización desarrollado para la gestión de casos y notificaciones.
-* *Paraview:* Post-procesamiento y análisis cualitativo de campos de presión y temperatura.
+* **OpenFOAM v13:** Resolución de ecuaciones mediante volúmenes finitos.
+* **SALOME:** Pre-procesamiento, diseño CAD y discretización del dominio (mallado).
+* **Python (LINX):** Software de optimización y automatización desarrollado para la gestión de casos y notificaciones.
+* **Paraview:** Post-procesamiento y análisis cualitativo de campos de presión y temperatura.
 
 ---
 
-## 📂 Estructura del Repositorio
-* `/Scripts`: Automatización de extracción de datos entre OpenFOAM y Octave.
+## 📂 Herramientas y Scripts de Automatización
+Se han desarrollado herramientas específicas para optimizar el flujo de trabajo entre el mallado, la simulación y el análisis de datos:
+
+### [LINX | OpenFOAM Engineering Dashboard (main.py)](main.py)
+Interfaz gráfica integral para la gestión de casos. Permite automatizar el pre-procesamiento (`ideasUnvToFoam`, `checkMesh`), controlar la descomposición de mallas para paralelo y monitorear la ejecución de solvers en tiempo real.
+
+### [Gestión de Flujo Local (code2.py)](code2.py)
+Script de automatización secuencial. Realiza la conversión de malla, aplica la corrección de condiciones de frontera (cambio de `patch` a `wall`) y gestiona la pre-compilación de condiciones `coded` antes de lanzar la ejecución en 8 núcleos.
+
+### [Extractor de Datos de ParaView (ExtractorV2.py)](ExtractorV2.py)
+Script de post-procesamiento masivo. Interactúa con el núcleo de ParaView para extraer magnitudes de Temperatura y Velocidad, organizándolas con ordenamiento natural para su posterior análisis cuantitativo en Octave/MATLAB.
 
 ---
 
