@@ -35,10 +35,10 @@ Debido a la alta resolución de las mallas y la complejidad de los resultados tr
 ## 📂 Herramientas y Scripts de Automatización
 Se han desarrollado herramientas específicas para optimizar el flujo de trabajo entre el mallado, la simulación y el análisis de datos:
 
-###[LINX | OpenFOAM Engineering Dashboard (LINX.py)](LINX.py)
+### [LINX | OpenFOAM Engineering Dashboard (LINX.py)](LINX.py)
 Interfaz gráfica integral para la gestión de casos. Permite automatizar el pre-procesamiento (`ideasUnvToFoam`, `checkMesh`), controlar la descomposición de mallas para paralelo y monitorear la ejecución de solvers en tiempo real.
 
-###[Gestión de Flujo Local (Execute_Local.py)](Execute_Local.py)
+### [Gestión de Flujo Local (Execute_Local.py)](Execute_Local.py)
 Script de automatización secuencial para entornos locales. Realiza la conversión de malla, aplica la corrección de condiciones de frontera (cambio de `patch` a `wall`) y gestiona la pre-compilación de condiciones `coded` antes de lanzar la ejecución en paralelo.
 
 ### [Extractor de Datos de ParaView (Extractor_Data.py)](Extractor_Data.py)
