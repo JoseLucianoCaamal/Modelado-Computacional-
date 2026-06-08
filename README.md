@@ -7,7 +7,7 @@ El proyecto se enfoca en el analisis fluidodinamico y termico de un sistema hibr
 ## Autores y Supervision
 * Autor: Jose Luciano Caamal Ayala
 * Directores de Tesis:
-  * Dr. Juan Manuel Rivero Fernandez, ENES Merida, UNAM
+  * Dr. [Juan Manuel Rivero Fernandez](https://www.linkedin.com/in/jm-rf-termofluidos/), ENES Merida, UNAM
   * Dr. Johan Jair Estrada Lopez, UADY
 * Institucion: Facultad de Matematicas, UADY
 
